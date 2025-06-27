@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global EV Insights</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f4f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #002244;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      background: #021a38;
+      display: flex;
+      justify-content: center;
+      padding: 0.8rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    section h2 {
+      color: #002244;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .tableauPlaceholder {
+      width: 100%;
+      margin: auto;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    footer {
+      background: #002244;
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Global EV Insights</h1>
+    <p>Live Dashboard & Storytelling Powered by Tableau</p>
+  </header>
+
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#story">Story</a>
+  </nav>
+
+  <!-- EV Dashboard Section -->
+  <section id="dashboard">
+    <h2>Live Electric Vehicle Dashboard</h2>
+    <div class='tableauPlaceholder' id='vizDashboard' style='position: relative'>
+      <noscript>
+        <a href='#'>
+          <img alt='Dashboard 1' src='https://public.tableau.com/static/images/Bo/Book1_17510053561980/Dashboard1/1_rss.png' style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='Book1_17510053561980/Dashboard1' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/Bo/Book1_17510053561980/Dashboard1/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-GB' />
+        <param name='filter' value='publish=yes' />
+      </object>
+    </div>
+  </section>
+
+  <!-- EV Story Section -->
+  <section id="story">
+    <h2>EV Growth & Impact Story</h2>
+    <div class='tableauPlaceholder' id='vizStory' style='position: relative'>
+      <noscript>
+        <a href='#'>
+          <img alt='Story 1' src='https://public.tableau.com/static/images/Bo/Book1_17510053561980/Story1/1_rss.png' style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='Book1_17510053561980/Story1' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/Bo/Book1_17510053561980/Story1/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-GB' />
+        <param name='filter' value='publish=yes' />
+      </object>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Global EV Insights | Powered by Tableau Public
+  </footer>
+
+  <!-- Tableau Script -->
+  <script type='text/javascript'>
+    // Dashboard
+    var div1 = document.getElementById('vizDashboard');
+    var obj1 = div1.getElementsByTagName('object')[0];
+    obj1.style.width = '100%';
+    obj1.style.height = '1000px';
+    var script1 = document.createElement('script');
+    script1.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    obj1.parentNode.insertBefore(script1, obj1);
+
+    // Story
+    var div2 = document.getElementById('vizStory');
+    var obj2 = div2.getElementsByTagName('object')[0];
+    obj2.style.width = '100%';
+    obj2.style.height = '800px';
+    var script2 = document.createElement('script');
+    script2.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    obj2.parentNode.insertBefore(script2, obj2);
+  </script>
+
+</body>
+</html>
